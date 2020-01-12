@@ -10,8 +10,8 @@ class EmailAddressParser
   end
   
   def parse
-    email_list = @emails.split(/[, ]/)
-    email.list = cities.reject { |c| c.empty? }
+    email_list = @emails.split(/[, ]/).uniq
+    email.list = c.reject { |c| c.empty? }
     email_list.uniq
   end
 end
